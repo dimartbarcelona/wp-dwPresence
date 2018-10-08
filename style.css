@@ -1,0 +1,148 @@
+/* basical structure */
+@import url("icomoon/style.css");
+#main-header, #main-content, .main-aside, #main-footer {
+  flex-grow: 1;
+  flex-basis: 100%;
+  padding: 10px; }
+
+* {
+  margin: 0;
+  padding: 0; }
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #fefaeb;
+  color: #090401; }
+
+a {
+  color: #090401; }
+
+#template-wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  text-align: center; }
+
+.max-width-content {
+  max-width: 1280px;
+  margin: 0 auto; }
+
+@media all and (min-width: 600px) {
+  .main-aside {
+    flex: 1 1 auto; } }
+@media all and (min-width: 800px) {
+  #main-content {
+    flex: 2 0;
+    order: 2; }
+
+  #left-aside {
+    order: 1; }
+
+  #right-aside {
+    order: 3; }
+
+  #main-footer {
+    order: 4; } }
+/* header */
+#main-header {
+  padding: 0; }
+  #main-header #main-header-row {
+    width: 100%;
+    display: table;
+    padding: 10px 10px;
+    box-sizing: border-box; }
+  #main-header #identity, #main-header #div-nav {
+    display: table-cell;
+    vertical-align: middle; }
+  #main-header #div-logo, #main-header #site-title, #main-header #site-description {
+    min-width: 120px;
+    max-width: 300px; }
+  #main-header .custom-logo {
+    width: 100%;
+    height: auto; }
+  #main-header #site-title {
+    font-family: arial;
+    font-size: 1em; }
+  #main-header #site-description {
+    font-family: arial;
+    font-size: 0.6em;
+    margin-top: 0.3em;
+    opacity: 0.7;
+    text-transform: uppercase; }
+
+#header-background {
+  width: 100%;
+  max-width: 1280px;
+  /* With padding we get the background to be proportional-responsive.
+  We calc the desired percentage of the height with respect to the width and we apply it to the padding-top.  */
+  padding-top: 29%;
+  margin: 0 auto;
+  background-image: url(images/background-header.jpg);
+  background-size: cover; }
+
+/* Navigator */
+.menu_bar {
+  display: none; }
+  @media screen and (max-width: 1000px) {
+    .menu_bar {
+      display: block;
+      width: 100%; } }
+  @media screen and (max-width: 1000px) {
+    .menu_bar .bt-menu {
+      display: block;
+      padding: 20px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 25px;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box; } }
+
+.navigator {
+  width: 90%;
+  max-width: 100%;
+  margin: 20px auto;
+  text-align: right; }
+  @media screen and (max-width: 1000px) {
+    .navigator {
+      width: 80%;
+      height: 100%;
+      left: -100%;
+      margin: 0;
+      position: fixed;
+      text-align: center;
+      background-color: #024959; } }
+  .navigator ul {
+    overflow: hidden;
+    list-style: none;
+    display: inline-block; }
+    .navigator ul li {
+      float: left; }
+      .navigator ul li a {
+        color: #090401;
+        padding: 20px;
+        display: block;
+        text-decoration: none; }
+        .navigator ul li a:hover {
+          background-color: #37e8c; }
+        @media screen and (max-width: 1000px) {
+          .navigator ul li a {
+            color: #fefaeb; } }
+      .navigator ul li span {
+        margin-right: 10px; }
+      @media screen and (max-width: 1000px) {
+        .navigator ul li {
+          display: block;
+          float: none;
+          border-bottom: 1px solid rgba(255, 255, 255, 0.3); } }
+
+#main-footer {
+  padding-bottom: 0;
+  color: #fefaeb; }
+  #main-footer .max-width-content {
+    padding-top: 1em;
+    padding-bottom: 1em;
+    background-color: #090401; }
+
+/*# sourceMappingURL=style.css.map */

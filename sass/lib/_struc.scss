@@ -1,0 +1,70 @@
+
+/* basical structure */
+
+//colors
+$color_ceramic_approx: #fffffa;
+
+//@extend-elements
+//original selectors
+//#main-header, #main-content, .main-aside, #main-footer
+%flex-content {
+	flex-grow: 1;
+	flex-basis: 100%;
+	padding: 10px;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+}
+body {
+	margin: 0;
+	padding: 0;
+	background: $white;
+	color: $black;
+}
+a {
+	color: $black;
+}
+#template-wrapper {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	text-align: center;
+}
+#main-header {
+	@extend %flex-content;
+}
+#main-content {
+	@extend %flex-content;
+}
+.main-aside {
+	@extend %flex-content;
+}
+#main-footer {
+	@extend %flex-content;
+}
+.max-width-content {
+	max-width: 1280px;
+	margin: 0 auto;
+}
+@media all and(min-width: 600px) {
+	.main-aside {
+		flex: 1 1 auto;
+	}
+}
+@media all and(min-width: 800px) {
+	#main-content {
+		flex: 2 0;
+		order: 2;
+	}
+	#left-aside {
+		order: 1;
+	}
+	#right-aside {
+		order: 3;
+	}
+	#main-footer {
+		order: 4;
+	}
+}

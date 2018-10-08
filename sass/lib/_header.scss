@@ -1,0 +1,46 @@
+/* header */
+#main-header{
+	padding: 0;
+	#main-header-row {
+		width: 100%;
+		display: table;
+		padding: 10px 10px;
+		box-sizing: border-box;	
+	}
+	#identity, #div-nav {
+		display: table-cell;
+		vertical-align: middle;
+	}
+	#identity {
+
+	}
+	#div-logo, #site-title, #site-description {
+	    min-width: 120px;
+	    max-width: 300px;
+	}
+	.custom-logo {
+		width: 100%;
+		height: auto;
+	}
+	#site-title {
+		font-family: arial;
+		font-size: 1em;
+	}
+	#site-description {
+	    font-family: arial;
+	    font-size: 0.6em;
+	    margin-top: 0.3em;
+	    opacity: 0.7;
+	    text-transform: uppercase;
+	}
+}
+#header-background {
+	width: 100%;
+	max-width: 1280px;
+	/* With padding we get the background to be proportional-responsive.
+	We calc the desired percentage of the height with respect to the width and we apply it to the padding-top.  */
+	padding-top: 29%;
+	margin: 0 auto;
+	background-image: url(images/background-header.jpg);
+	background-size: cover;
+}
